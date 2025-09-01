@@ -1,0 +1,33 @@
+{
+  "name": "weather-web-application",
+  "version": "1.0.0",
+  "description": "A simple weather web app.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint src",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --config webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gh-pages-init": "git branch gh-pages",
+    "gh-pages-merge-main": "git switch gh-pages && git merge main --no-edit",
+    "gh-pages-deploy": "git switch gh-pages && git add dist -f && git commit -m \"Deployment commit\" && git subtree push --prefix dist origin gh-pages && git switch main"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.3.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "prettier": "3.6.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
+  }
+}
